@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <input id="num" type="text" value="" placeholder="Введите дату">
+<button id="but">Жми</button>  
+    <script>
+        "use strict";
+        let elem = document.getElementById('num');
+let btn = document.getElementById('but');
+btn.addEventListener('click', func);
+
+function func() {
+ let str = elem.value;
+  let arr = str.split('');
+ let arr2 = str.split('').reverse();
+ for(let i = 0; i < arr.length; i++) {
+  if(arr[i]!== arr2[i]) { 
+   alert('это слово не палиндром');
+   return;
+  }
+   }
+ alert('это слово палиндром');
+ return;
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+    <input type="text" id="num" value="">   
+    <script>
+        "use strict";
+        let elem = document.getElementById('num');
+elem.addEventListener('blur', func);
+
+function func() {
+ let arr2 = [];
+ let str = elem.value;
+ let arr = str.split('.');
+ arr2 = arr.reverse();
+ let str1 = arr2.join('-');
+ elem.value = str1;
+}
+        
+    </script>
+</body>
+</html>

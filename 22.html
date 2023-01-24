@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" class="inp1">
+    <p class="p1"></p>
+    <script>
+        "use strict";
+        const getInp1 = document.querySelector('.inp1');
+        const getP1 = document.querySelector('.p1');
+
+        makeFahrenheit(getInp1, getP1);
+
+        function makeFahrenheit(argElemIn, argElemOut) {
+
+            argElemIn.addEventListener('keypress', function () {
+
+                argElemOut.innerHTML = (+argElemIn.value - 32) / 1.8;
+
+            });
+
+        };
+    </script>
+</body>
+</html>

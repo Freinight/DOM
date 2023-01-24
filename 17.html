@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Текст1</p>
+<p>Текст2</p>
+<p>Текст3</p>
+<input type="text" value="" id="result">
+    <script>
+        "use strict";
+        let inp = document.getElementById('result');
+let p = document.getElementsByTagName('p');
+for (let i = 0; i < p.length; i++) {
+ p[i].addEventListener('click', func);
+ }
+
+let count = 0;
+function func() {
+ count++;
+ inp.value = count;
+}
+    </script>
+</body>
+</html>

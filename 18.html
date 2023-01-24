@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>Lorem ipsum dolor</div>
+<div>sit amet, consectetur adipisicing</div>
+<div>debitis voluptate eos </div>
+<button>Обрезать</button>                   
+    <script>
+        "use strict";
+        let btn = document.querySelector('button');
+btn.addEventListener('click', func);
+let elems = document.getElementsByTagName('div');
+let str = '';
+
+function func () {
+ for(let i = 0; i < elems.length; i++) {
+  str = elems[i].innerHTML.slice(0, 10)+'...';
+  elems[i].innerHTML = str;
+ }
+}
+    </script>
+</body>
+</html>

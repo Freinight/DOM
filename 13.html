@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="http://google.com">ссылка1</a>
+<a href="333">ссылка2</a>
+<a href="752">ссылка3</a>  
+    <script>
+        "use strict";
+        let elem = document.getElementsByTagName('a');
+
+function start() {
+ for (let i = 0; i < elem.length; i++) {
+  if (elem[i].href.indexOf('http://') == 0) {
+    elem[i].innerHTML = elem[i].innerHTML + 'стрелка';
+  }
+ }
+ }
+    </script>
+</body>
+</html>
